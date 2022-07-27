@@ -1,3 +1,2 @@
-export * from "./Meta";
-export * from "./Layout";
-export * from "./Pages";
+export * from "./layouts/default";
+export * from "./pages";
