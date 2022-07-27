@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Meta } from "../components/common";
 import { DefaultLayout } from "../components/layouts";
-import { HomeHero } from "../components/sections/home";
+import { HomeHero, HomeSkills, HomeWorks } from "../components/sections/home";
 import "../styles/globals.css";
 
 const IndexPage = () => {
@@ -12,6 +12,8 @@ const IndexPage = () => {
         description="Onuchukwu Adebayo is a Software Engineer highly skilled at design systems and progressively enhanced web applications."
       />
       <HomeHero />
+      <HomeSkills />
+      <HomeWorks />
     </DefaultLayout>
   );
 };

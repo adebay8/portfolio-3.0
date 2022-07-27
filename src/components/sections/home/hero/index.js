@@ -11,6 +11,9 @@ import {
   JobTitleText,
   ProfileImage,
   ImageContainer,
+  InnerContentBottom,
+  Highlights,
+  Highlight,
 } from "./styles";
 
 const HomeHero = () => {
@@ -41,6 +44,18 @@ const HomeHero = () => {
           ></ImageContainer>
         </ProfileImage>
       </InnerContentPrimary>
+      <InnerContentBottom>
+        <Highlights>
+          <Highlight>
+            Highly skilled at progressive enhancement, design systems &#38; UI
+            Engineering.
+          </Highlight>
+          <Highlight>
+            Over a decade of experience building products for clients across
+            several countries.
+          </Highlight>
+        </Highlights>
+      </InnerContentBottom>
     </HeroSection>
   );
 };

@@ -72,13 +72,13 @@ export const JobTitleContent = styled.div`
 export const JobTitleText = styled.h1`
   transition: transform 0.5s, opacity 0.2s;
   margin: 0;
-  font-size: 4em;
+  font-size: 5em;
   font-weight: 900;
   line-height: 1.1;
   letter-spacing: -0.03em;
   color: #ccf381;
   font-size: 2em;
-  margin: 0.67em 0;
+  margin: 0 0;
 
   @media (min-width: 701px) {
     max-width: 30vw;
@@ -86,7 +86,7 @@ export const JobTitleText = styled.h1`
   }
 
   @media (min-width: 581px) {
-    font-size: 4.4em;
+    font-size: 5em;
   }
 `;
 
@@ -141,4 +141,27 @@ export const ImageContainer = styled.span`
   background-position-x: center;
   margin-left: -2.2em;
   background-image: url("https://via.placeholder.com/700");
+`;
+
+export const InnerContentBottom = styled(InnerContent)`
+  @media (min-width: 701px) {
+    margin-top: auto;
+    padding-right: 6em;
+  }
+`;
+
+export const Highlights = styled.ul`
+  display: flex;
+  line-height: 1.5;
+  justify-content: space-between;
+  color: #ccf381;
+
+  @media (min-width: 701px) {
+    width: 41%;
+    font-size: 1em;
+  }
+`;
+
+export const Highlight = styled.li`
+  width: calc(50% - 1.731em);
 `;
