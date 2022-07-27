@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 
-export const Meta = ({ title, path = "/", description = "", image = "" }) => {
+const Meta = ({ title, path = "/", description = "", image = "" }) => {
   const hostUrl = process.env.GATSBY_APP_URL;
 
   return (
@@ -24,3 +24,5 @@ export const Meta = ({ title, path = "/", description = "", image = "" }) => {
     </>
   );
 };
+
+export default Meta;
