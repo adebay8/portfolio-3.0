@@ -5,6 +5,7 @@ html {
   text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   font-size: 0.9rem;
+  scroll-behavior: smooth;
 }
 
 @media (min-width: 701px) and (max-width: 1600px) {

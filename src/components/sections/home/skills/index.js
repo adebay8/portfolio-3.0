@@ -10,7 +10,7 @@ import {
 
 const HomeSkills = () => {
   return (
-    <Section>
+    <Section id="skills">
       <SkillsInnerContent>
         <SkillsArticle>
           <SkillsArticleContent>

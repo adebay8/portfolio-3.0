@@ -1,3 +1,4 @@
+import { Link } from "gatsby";
 import styled from "styled-components";
 
 export const WorksSection = styled.section`
@@ -7,7 +8,7 @@ export const WorksSection = styled.section`
   position: relative;
   align-items: center;
   justify-content: center;
-  background-color: #4831d4;
+  background-color: #4831d4ef;
 `;
 
 export const WorksInnerContent = styled.div`
@@ -33,7 +34,7 @@ export const WorksInnerContent = styled.div`
 export const WorksLanes = styled.div`
   width: 100%;
   display: flex;
-  background-color: #fff;
+  background-color: #4831d4;
 
   @media (min-width: 1024px) and (min-height: 665px) and (max-height: 1500px) {
     min-height: 40em;
@@ -51,7 +52,8 @@ export const WorksLane = styled.div`
   &:not(:last-of-type) {
     border-style: solid;
     border-width: 0 0 0.15rem 0;
-    border-color: rgba(72, 49, 212, 0.3);
+    /* border-color: rgba(72, 49, 212, 0.3); */
+    border-color: #ccf381aa;
 
     @media (min-width: 581px) {
       border-bottom-width: 0;
@@ -75,7 +77,8 @@ export const WorksLaneArticleHeading = styled.h1`
   font-weight: 900;
   line-height: 1.1;
   letter-spacing: -0.03em;
-  color: #4831d4;
+  /* color: #4831d4; */
+  color: #ccf381;
 
   @media (min-width: 701px) {
     max-width: 30vw;
@@ -93,7 +96,8 @@ export const WorksLaneArticleParagraph = styled.p`
   line-height: 1.2;
   font-size: 1.6em;
   letter-spacing: 0.02em;
-  color: #3d155f;
+  /* color: #3d155f; */
+  color: #fff;
   transition: transform 0.5s, opacity 0.2s;
 
   @media (min-width: 701px) {
@@ -101,5 +105,63 @@ export const WorksLaneArticleParagraph = styled.p`
     font-size: 1.07em;
     -webkit-transition-delay: 310ms;
     transition-delay: 310ms;
+  }
+`;
+
+export const WorksLaneLink = styled(Link)`
+  color: #3d155f;
+  position: relative;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.9em;
+  user-select: none;
+  display: inline-flex;
+  overflow: hidden;
+  background: transparent;
+  white-space: nowrap;
+  min-width: 23.222em;
+  outline: none;
+  text-decoration: none;
+
+  &:hover > div {
+    color: #4831d4;
+    border-color: #fff;
+
+    &:before {
+      -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+      transform: translateX(0);
+      background: #fff;
+    }
+  }
+`;
+
+export const WorksLaneLinkContent = styled.div`
+  z-index: 1;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25em 3em;
+  width: 100%;
+  color: #fff;
+  border: 1px solid #fff;
+  min-height: 4.5em;
+
+  &::before {
+    content: "";
+    width: 101%;
+    height: 108%;
+    pointer-events: none;
+    z-index: -1;
+    position: absolute;
+    top: -0.1em;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    transform: translateX(-100%);
+    transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
   }
 `;
