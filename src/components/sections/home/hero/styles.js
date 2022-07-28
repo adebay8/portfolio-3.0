@@ -1,3 +1,4 @@
+import { Link } from "gatsby";
 import styled from "styled-components";
 
 export const HeroSection = styled.section`
@@ -164,4 +165,62 @@ export const Highlights = styled.ul`
 
 export const Highlight = styled.li`
   width: calc(50% - 1.731em);
+`;
+
+export const Nav = styled.nav`
+  z-index: 999;
+  display: flex;
+  position: fixed;
+  margin-top: -35px;
+  color: #4831d4;
+  right: calc(6em + 1em);
+`;
+
+export const NavItems = styled.ul`
+  width: 0.5em;
+  display: flex;
+  flex-direction: column;
+`;
+
+export const NavItem = styled.li`
+  width: 0.523em;
+`;
+
+export const NavItemButton = styled(Link)`
+  width: 100%;
+  display: flex;
+  width: inherit;
+  cursor: pointer;
+  min-height: 2em;
+  position: relative;
+  color: currentColor;
+  transition-delay: 100ms;
+  outline-color: transparent;
+  background-color: transparent;
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  padding: 0;
+  border: none;
+
+  &::after {
+    content: "";
+    width: 100%;
+    height: 0.523em;
+    position: absolute;
+    background-color: currentColor;
+    border: 1px solid currentColor;
+    -webkit-transition: -webkit-transform 0.2s 100ms;
+    -webkit-transition: transform 0.2s 100ms;
+    transition: transform 0.2s 100ms;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  &[aria-current="true"]:after {
+    transform: rotate(0) scale(2);
+    background: transparent;
+  }
 `;
