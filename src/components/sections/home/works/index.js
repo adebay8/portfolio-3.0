@@ -42,9 +42,9 @@ const HomeWorks = () => {
                   sometimes
                 </WorksLaneArticleHeading>
                 <WorksLaneArticleParagraph>
-                  About design
+                  About system design,
                   <br />
-                  frontend dev,
+                  backend development,
                   <br />
                   learning and life.
                 </WorksLaneArticleParagraph>

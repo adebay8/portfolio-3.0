@@ -4,7 +4,7 @@ html {
   position: relative;
   text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
-  font-size: 0.9rem;
+  font-size: 16px;
   scroll-behavior: smooth;
 }
 

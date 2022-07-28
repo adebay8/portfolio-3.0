@@ -102,7 +102,7 @@ export const WorksLaneArticleParagraph = styled.p`
 
   @media (min-width: 701px) {
     max-width: 701px;
-    font-size: 1.07em;
+    /* font-size: 1.07em; */
     -webkit-transition-delay: 310ms;
     transition-delay: 310ms;
   }
