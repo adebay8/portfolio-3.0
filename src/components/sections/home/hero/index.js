@@ -14,6 +14,10 @@ import {
   InnerContentBottom,
   Highlights,
   Highlight,
+  Nav,
+  NavItems,
+  NavItem,
+  NavItemButton,
 } from "./styles";
 
 const HomeHero = () => {
@@ -55,6 +59,16 @@ const HomeHero = () => {
             several countries.
           </Highlight>
         </Highlights>
+        <Nav>
+          <NavItems>
+            <NavItem>
+              <NavItemButton to="/#" aria-current />
+              <NavItemButton to="/#skills" />
+              <NavItemButton to="/#works" />
+              <NavItemButton />
+            </NavItem>
+          </NavItems>
+        </Nav>
       </InnerContentBottom>
     </HeroSection>
   );
