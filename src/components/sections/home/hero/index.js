@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import BackgroundOneSVG from "./components/BackgroundOneSVG";
 import BackgroundTwoSVG from "./components/BackgroundTwoSVG";
 
@@ -20,7 +20,9 @@ import {
   NavItemButton,
 } from "./styles";
 
-const HomeHero = () => {
+const HomeHero = ({ data }) => {
+  const [activeNavItem, setActiveNavItem] = useState(0);
+
   return (
     <HeroSection>
       <InnerContentPrimary>
@@ -50,22 +52,24 @@ const HomeHero = () => {
       </InnerContentPrimary>
       <InnerContentBottom>
         <Highlights>
-          <Highlight>
-            Highly skilled at progressive enhancement, design systems &#38; UI
-            Engineering.
-          </Highlight>
-          <Highlight>
-            Over a decade of experience building products for clients across
-            several countries.
-          </Highlight>
+          {data.highlights.map((highlight, index) => (
+            <Highlight
+              key={index}
+              dangerouslySetInnerHTML={{ __html: highlight }}
+            />
+          ))}
         </Highlights>
         <Nav>
           <NavItems>
             <NavItem>
-              <NavItemButton to="/#" aria-current />
-              <NavItemButton to="/#skills" />
-              <NavItemButton to="/#works" />
-              <NavItemButton />
+              {data.navItems.map(({ path }, index) => (
+                <NavItemButton
+                  key={index}
+                  to={path}
+                  aria-current={activeNavItem === index}
+                  onClick={() => setActiveNavItem(index)}
+                />
+              ))}
             </NavItem>
           </NavItems>
         </Nav>

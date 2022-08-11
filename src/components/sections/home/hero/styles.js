@@ -8,10 +8,14 @@ export const HeroSection = styled.section`
   justify-content: center;
   flex-direction: column;
   padding-bottom: 4.17rem;
-  background: #4831d4;
+  background: ${({ theme }) => theme.colors.primary};
 
   @media screen and (min-width: 581px) {
-    background: linear-gradient(90deg, #4831d4 67%, #ccf381 33%);
+    background: linear-gradient(
+      90deg,
+      ${({ theme }) => theme.colors.primary} 67%,
+      ${({ theme }) => theme.colors.secondary} 33%
+    );
   }
 `;
 
@@ -77,7 +81,7 @@ export const JobTitleText = styled.h1`
   font-weight: 900;
   line-height: 1.1;
   letter-spacing: -0.03em;
-  color: #ccf381;
+  color: ${({ theme }) => theme.colors.secondary};
   font-size: 2em;
   margin: 0 0;
 
@@ -155,7 +159,7 @@ export const Highlights = styled.ul`
   display: flex;
   line-height: 1.5;
   justify-content: space-between;
-  color: #ccf381;
+  color: ${({ theme }) => theme.colors.secondary};
 
   @media (min-width: 701px) {
     width: 41%;
@@ -172,7 +176,7 @@ export const Nav = styled.nav`
   display: flex;
   position: fixed;
   margin-top: -35px;
-  color: #4831d4;
+  color: ${({ theme }) => theme.colors.primary};
   right: calc(6em + 1em);
 `;
 
