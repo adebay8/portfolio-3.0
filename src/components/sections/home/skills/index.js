@@ -1,4 +1,7 @@
 import React from "react";
+import BackgroundLineCircleSVG from "./components/BackgroundLineCircleSVG";
+import BackgroundSquareCircleSVG from "./components/BackgroundSquareCircleSVG";
+import BackgroundSquareSVG from "./components/BackgroundSquareSVG";
 import {
   Heading,
   Paragraph,
@@ -22,7 +25,9 @@ const HomeSkills = () => {
               you'll find me (~_^). I'm committed to creating fluent user
               experiences while staying fashionable.
             </Paragraph>
+            <BackgroundSquareSVG />
           </SkillsArticleContent>
+          <BackgroundSquareCircleSVG />
         </SkillsArticle>
         <SkillsArticle>
           <SkillsArticleContent>
@@ -34,6 +39,7 @@ const HomeSkills = () => {
               performance and scalabilty are priorities on my radar.
             </Paragraph>
           </SkillsArticleContent>
+          <BackgroundLineCircleSVG />
         </SkillsArticle>
       </SkillsInnerContent>
     </Section>

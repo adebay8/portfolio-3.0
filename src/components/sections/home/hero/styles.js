@@ -145,7 +145,7 @@ export const ImageContainer = styled.span`
   background-size: cover;
   background-position-x: center;
   margin-left: -2.2em;
-  background-image: url("https://via.placeholder.com/700");
+  background-image: url("https://via.placeholder.com/700/ffffff");
 `;
 
 export const InnerContentBottom = styled(InnerContent)`
