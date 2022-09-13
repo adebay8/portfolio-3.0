@@ -21,11 +21,16 @@ const HomeWorks = () => {
             <WorksLaneArticle>
               <WorksLaneArticleContent>
                 <WorksLaneArticleHeading>
-                  I build & <br />
+                  I build &#38;
+                  <br />
                   design stuff
                 </WorksLaneArticleHeading>
                 <WorksLaneArticleParagraph>
-                  Open source <br /> projects, web apps <br /> and experimentals
+                  Open source
+                  <br />
+                  projects,&nbsp;web apps
+                  <br />
+                  and experimentals
                 </WorksLaneArticleParagraph>
               </WorksLaneArticleContent>
             </WorksLaneArticle>

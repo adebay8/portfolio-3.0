@@ -8,7 +8,7 @@ export const WorksSection = styled.section`
   position: relative;
   align-items: center;
   justify-content: center;
-  background-color: #4831d4ef;
+  background-color: ${({ theme }) => theme.colors.secondary};
 `;
 
 export const WorksInnerContent = styled.div`
@@ -34,7 +34,7 @@ export const WorksInnerContent = styled.div`
 export const WorksLanes = styled.div`
   width: 100%;
   display: flex;
-  background-color: #4831d4;
+  background-color: ${({ theme }) => theme.colors.primary};
 
   @media (min-width: 1024px) and (min-height: 665px) and (max-height: 1500px) {
     min-height: 40em;
@@ -53,7 +53,7 @@ export const WorksLane = styled.div`
     border-style: solid;
     border-width: 0 0 0.15rem 0;
     /* border-color: rgba(72, 49, 212, 0.3); */
-    border-color: #ccf381aa;
+    border-color: ${({ theme }) => theme.colors.secondary}aa;
 
     @media (min-width: 581px) {
       border-bottom-width: 0;
@@ -77,8 +77,8 @@ export const WorksLaneArticleHeading = styled.h1`
   font-weight: 900;
   line-height: 1.1;
   letter-spacing: -0.03em;
-  /* color: #4831d4; */
-  color: #ccf381;
+  /* color: ${({ theme }) => theme.colors.primary}; */
+  color: ${({ theme }) => theme.colors.secondary};
 
   @media (min-width: 701px) {
     max-width: 30vw;
@@ -125,7 +125,7 @@ export const WorksLaneLink = styled(Link)`
   text-decoration: none;
 
   &:hover > div {
-    color: #4831d4;
+    color: ${({ theme }) => theme.colors.primary};
     border-color: #fff;
 
     &:before {
