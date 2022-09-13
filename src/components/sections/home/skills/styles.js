@@ -14,7 +14,7 @@ export const SkillsInnerContent = styled.div`
   display: flex;
   flex-direction: column;
 
-  @media (min-width: 701px) {
+  @media (min-width: ${({ theme }) => theme.screens.md}) {
     padding: 0 10rem;
   }
 
@@ -47,7 +47,7 @@ export const Heading = styled.h1`
   font-weight: 900;
   line-height: 1.1;
   letter-spacing: -0.03em;
-  color: #4831d4;
+  color: ${({ theme }) => theme.colors.primary};
   transition: transform 0.5s, opacity 0.2s;
 
   @media (min-width: 701px) {
@@ -67,4 +67,33 @@ export const Paragraph = styled.p`
     transition-delay: 310ms;
     width: 32vw;
   }
+`;
+
+export const BackgroundSquareSVGContainer = styled.svg`
+  z-index: -1;
+  width: 8rem;
+  height: 9rem;
+  position: absolute;
+  top: -4rem;
+  right: 18.4rem;
+`;
+
+export const BackgroundSquareCircleSVGContainer = styled.svg`
+  width: 20rem;
+  height: 14.87rem;
+  margin-right: 10rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  position: absolute;
+`;
+
+export const BackgroundLineCircleSVGContainer = styled.svg`
+  left: 0;
+  top: 5rem;
+  width: 13rem;
+  height: 13.41rem;
+  margin-left: 15rem;
+  right: 0;
+  position: absolute;
 `;

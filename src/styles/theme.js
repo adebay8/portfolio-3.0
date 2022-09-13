@@ -9,14 +9,14 @@ const Theme = {
   },
   screens: {
     sm: "480px",
-    md: "768px",
+    md: "701px",
     lg: "976px",
     xl: "1440px",
   },
   colors: {
-    primary: "#4831d4",
+    primary: "#3d155f",
     primary500: "#4831d4",
-    secondary: "#ccf381",
+    secondary: "#eaeaea",
     secondary500: "#ccf381",
     blue: "#4831d4",
     green: "#ccf381",

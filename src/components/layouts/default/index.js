@@ -5,12 +5,12 @@ import Theme from "../../../styles/theme";
 import { Header } from "./header";
 import { Footer } from "./footer";
 
-const DefaultLayout = ({ children }) => {
+const DefaultLayout = ({ nav, children }) => {
   return (
     <ThemeProvider theme={Theme}>
-      <Header />
+      <Header {...nav} />
       <main>{children}</main>
-      <Footer />
+      <Footer {...nav} />
     </ThemeProvider>
   );
 };
