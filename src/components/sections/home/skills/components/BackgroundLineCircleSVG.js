@@ -18,8 +18,8 @@ const BackgroundLineCircleSVG = () => {
       <path
         fill="none"
         stroke={theme.colors.primary}
-        stroke-miterlimit="50"
-        stroke-width="2"
+        strokeMiterlimit="50"
+        strokeWidth="2"
         d="M17.053 9.57a7.891 7.891 0 11-15.782 0 7.891 7.891 0 0115.782 0zM45.122 9.57a7.891 7.891 0 11-15.782 0 7.891 7.891 0 0115.782 0zM73.19 9.57a7.891 7.891 0 11-15.781 0 7.891 7.891 0 0115.782 0zM101.26 9.57a7.891 7.891 0 11-15.782 0 7.891 7.891 0 0115.782 0zM129.329 9.57a7.891 7.891 0 11-15.783 0 7.891 7.891 0 0115.783 0zM238.083 103.963v0l-.561 22.259v0l22.259-.561v0l-.561 22.258v0l22.259-.56v0l-.561 22.258v0l22.259-.56v0l-.559 22.26v0l22.26-.56v0"
       ></path>
     </BackgroundLineCircleSVGContainer>

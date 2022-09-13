@@ -1,4 +1,3 @@
-import { Link } from "gatsby";
 import React from "react";
 import {
   BasicContact,
@@ -57,9 +56,13 @@ export const Footer = ({ links, contact }) => {
             <br />
             <FooterCopyright>
               Inspired by&nbsp;
-              <Link to="https://olaolu.dev" target="_blank">
+              <a
+                href="https://olaolu.dev"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Olaolu
-              </Link>
+              </a>
             </FooterCopyright>
           </FooterCopyright>
         </FooterBottom>

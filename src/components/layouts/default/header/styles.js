@@ -17,6 +17,17 @@ export const HeaderSection = styled.header`
     padding-left: 6em;
     padding-right: 6em;
   }
+
+  @media (max-width: 700px) {
+    padding-left: 32px;
+    padding-right: 45px;
+    position: absolute;
+    height: 8rem;
+  }
+
+  @media (max-width: 580px) {
+    font-size: 1.2rem;
+  }
 `;
 
 export const Logo = styled(Link)`
@@ -39,6 +50,10 @@ export const LogoText = styled.p`
   color: ${({ theme }) => theme.colors.secondary};
   font-size: 2em;
   margin: 0 0;
+
+  @media (max-width: 700px) {
+    font-size: 20px;
+  }
 `;
 
 export const MenuButton = styled.button`
@@ -55,6 +70,15 @@ export const MenuButton = styled.button`
   border: none;
   cursor: pointer;
   transform: scale(${({ isOpen }) => (isOpen ? 0.9 : 1)});
+
+  @media (max-width: 580px) {
+    color: #ccf381;
+  }
+
+  @media (max-width: 700px) {
+    width: 30px;
+    height: 23px;
+  }
 
   &::before,
   &::after {
@@ -115,6 +139,25 @@ export const Nav = styled.nav`
     transition: opacity 0.4s, box-shadow 0.4s;
   }
 
+  @media (max-width: 700px) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #fff;
+    font-size: 2.2rem;
+    -webkit-transition: opacity 0.3s, visibility 0.3s;
+    transition: opacity 0.3s, visibility 0.3s;
+    -webkit-box-pack: space-around;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: space-around;
+    justify-content: space-around;
+    padding: 68px;
+  }
+
   ${({ isOpen }) =>
     isOpen
       ? `
@@ -134,6 +177,12 @@ export const Nav = styled.nav`
     visibility: hidden;
     pointer-events: none;
       }
+
+      @media (max-width: 700px){
+        opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+      }
       `}
 `;
 
@@ -146,6 +195,11 @@ export const NavList = styled.ul`
     transition-delay: 200ms;
     opacity: ${({ isOpen }) => (isOpen ? 1 : 0)};
     transform: translateY(${({ isOpen }) => (isOpen ? 0 : 50)}px);
+  }
+
+  @media (max-width: 700px) {
+    font-size: 20px;
+    line-height: 2.5;
   }
 `;
 
@@ -173,6 +227,11 @@ export const BasicContact = styled.div`
   font-size: 1em;
   line-height: 2.5;
   position: relative;
+
+  @media (max-width: 700px) {
+    font-size: 20px;
+    line-height: 2.5;
+  }
 `;
 
 export const SayHello = styled.span`

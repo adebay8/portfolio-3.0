@@ -10,12 +10,21 @@ export const HeroSection = styled.section`
   padding-bottom: 4.17rem;
   background: ${({ theme }) => theme.colors.primary};
 
-  @media screen and (min-width: 581px) {
+  @media (min-width: 581px) {
     background: linear-gradient(
       90deg,
       ${({ theme }) => theme.colors.primary} 67%,
       ${({ theme }) => theme.colors.secondary} 33%
     );
+  }
+
+  @media (max-width: 580px) {
+    margin-bottom: 10rem;
+    padding-bottom: 0;
+  }
+
+  @media (max-width: 700px) {
+    font-size: 0.95rem;
   }
 `;
 
@@ -59,6 +68,11 @@ export const InnerContentPrimary = styled(InnerContent)`
   @media (min-width: 581px) {
     margin-top: calc(11.12em + 2em);
   }
+
+  @media (max-width: 580px) {
+    margin-top: calc(146px);
+    padding: 0 15vw;
+  }
 `;
 
 export const JobTitle = styled.article`
@@ -93,6 +107,10 @@ export const JobTitleText = styled.h1`
   @media (min-width: 581px) {
     font-size: 5em;
   }
+
+  @media (max-width: 580px) {
+    font-size: 43px;
+  }
 `;
 
 export const JobTitleSubText = styled.p`
@@ -111,6 +129,14 @@ export const JobTitleSubText = styled.p`
 
   @media (min-width: 581px) {
     font-size: 1.3em;
+  }
+
+  @media (max-width: 700px) {
+    max-width: 20rem;
+  }
+
+  @media (max-width: 580px) {
+    font-size: 17px;
   }
 `;
 
@@ -153,6 +179,12 @@ export const InnerContentBottom = styled(InnerContent)`
     margin-top: auto;
     padding-right: 6em;
   }
+
+  @media (max-width: 580px) {
+    margin-top: 60px;
+    margin-bottom: 35px;
+    padding: 0 15vw;
+  }
 `;
 
 export const Highlights = styled.ul`
@@ -169,6 +201,14 @@ export const Highlights = styled.ul`
 
 export const Highlight = styled.li`
   width: calc(50% - 1.731em);
+
+  @media (max-width: 700px) {
+    font-size: 11px;
+  }
+
+  @media (max-width: 700px) {
+    width: 45%;
+  }
 `;
 
 export const Nav = styled.nav`
@@ -227,4 +267,54 @@ export const NavItemButton = styled(Link)`
     transform: rotate(0) scale(2);
     background: transparent;
   }
+`;
+
+export const MobileAvatar = styled.div`
+  width: 100%;
+  display: flex;
+  padding: 4rem 0;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background: #ccf381;
+
+  @media (min-width: 700px) {
+    display: none;
+  }
+`;
+
+export const MobileFigure = styled.div`
+  margin-left: 19px;
+  /* margin: 0; */
+  z-index: 1;
+  width: 198px;
+  height: 209px;
+  position: relative;
+  border: 0.115rem solid #fff;
+
+  & > svg {
+    top: -25%;
+    width: 342px;
+    z-index: -1;
+    height: 126%;
+    right: -47px;
+    position: absolute;
+  }
+`;
+
+export const MobileImageContainer = styled.span`
+  width: inherit;
+  display: block;
+  height: inherit;
+  margin-top: -20px;
+  background-color: #fff;
+  background-size: cover;
+  background-position-x: center;
+  margin-left: -18px;
+  background-image: url("https://via.placeholder.com/700/bbbbbb");
 `;

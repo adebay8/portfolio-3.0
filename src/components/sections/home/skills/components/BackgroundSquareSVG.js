@@ -13,7 +13,7 @@ const BackgroundOneSVG = () => {
       viewBox="0 0 213 196"
       data-shape="true"
       aria-hidden="true"
-      class="square-of-dots"
+      className="square-of-dots"
     >
       <path
         fill={theme.colors.secondary}
