@@ -68,6 +68,12 @@ export const ListItemLink = styled(Link)`
   text-decoration: none;
 `;
 
+export const ListItemExternalLink = styled.a`
+  position: relative;
+  color: ${({ theme }) => theme.colors.secondary};
+  text-decoration: none;
+`;
+
 export const CrossSiteNav = styled.ul`
   line-height: 2.5;
   font-size: 19px;

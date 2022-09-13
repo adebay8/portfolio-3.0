@@ -10,11 +10,12 @@ import {
   InnerContent,
   List,
   ListItem,
+  ListItemExternalLink,
   ListItemLink,
   SayHello,
 } from "./styles";
 
-export const Footer = () => {
+export const Footer = ({ links, contact }) => {
   return (
     <FooterSection id="contact">
       <InnerContent>
@@ -22,24 +23,31 @@ export const Footer = () => {
           <BasicContact>
             <SayHello>Say Hello</SayHello>
             <List>
-              <ListItem>
-                <ListItemLink>adebayop.o@yahoo.com</ListItemLink>
-              </ListItem>
-              <ListItem>
-                <ListItemLink>t.me/oluwaponnle</ListItemLink>
-              </ListItem>
+              {contact.map(({ title, link }, index) => (
+                <ListItem key={index}>
+                  {link.startsWith("/") ? (
+                    <ListItemLink to={link}>{title}</ListItemLink>
+                  ) : (
+                    <ListItemExternalLink href={link} target="_blank">
+                      {title}
+                    </ListItemExternalLink>
+                  )}
+                </ListItem>
+              ))}
             </List>
           </BasicContact>
           <CrossSiteNav>
-            <ListItem>
-              <ListItemLink to="/work">My Work</ListItemLink>
-            </ListItem>
-            <ListItem>
-              <ListItemLink to="/shelf">My Shelf</ListItemLink>
-            </ListItem>
-            <ListItem>
-              <ListItemLink>My Resume</ListItemLink>
-            </ListItem>
+            {links.map(({ title, link }, index) => (
+              <ListItem key={index}>
+                {link.startsWith("/") ? (
+                  <ListItemLink to={link}>{title}</ListItemLink>
+                ) : (
+                  <ListItemExternalLink href={link} target="_blank">
+                    {title}
+                  </ListItemExternalLink>
+                )}
+              </ListItem>
+            ))}
           </CrossSiteNav>
         </FooterMain>
         <FooterBottom>
@@ -48,7 +56,7 @@ export const Footer = () => {
             <br />
             <br />
             <FooterCopyright>
-              Inspired by{" "}
+              Inspired by&nbsp;
               <Link to="https://olaolu.dev" target="_blank">
                 Olaolu
               </Link>

@@ -56,10 +56,36 @@ const IndexPage = () => {
         OuterContentSVG: BackgroundLineCircleSVG,
       },
     ],
+    nav: {
+      links: [
+        {
+          title: "My Work",
+          link: "/work",
+        },
+        {
+          title: "My Shelf",
+          link: "https://blog.ponnle.xyz",
+        },
+        {
+          title: "My Resume",
+          link: "/resume",
+        },
+      ],
+      contact: [
+        {
+          title: "adebayop.o@yahoo.com",
+          link: "mailto:adebayop.o@yahoo.com",
+        },
+        {
+          title: "t.me/oluwaponnle",
+          link: "https://t.me/oluwaponnle",
+        },
+      ],
+    },
   };
 
   return (
-    <DefaultLayout>
+    <DefaultLayout nav={data.nav}>
       <Meta {...data.meta} />
       <HomeHero data={data.hero} />
       <HomeSkills skills={data.skills} />

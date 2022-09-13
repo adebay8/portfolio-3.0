@@ -16,7 +16,7 @@ const Theme = {
   colors: {
     primary: "#3d155f",
     primary500: "#4831d4",
-    secondary: "#f5f5f5",
+    secondary: "#eaeaea",
     secondary500: "#ccf381",
     blue: "#4831d4",
     green: "#ccf381",
