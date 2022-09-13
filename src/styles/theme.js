@@ -14,9 +14,9 @@ const Theme = {
     xl: "1440px",
   },
   colors: {
-    primary: "#4831d4",
+    primary: "#3d155f",
     primary500: "#4831d4",
-    secondary: "#ccf381",
+    secondary: "#f5f5f5",
     secondary500: "#ccf381",
     blue: "#4831d4",
     green: "#ccf381",

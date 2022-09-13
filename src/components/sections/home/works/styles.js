@@ -8,7 +8,7 @@ export const WorksSection = styled.section`
   position: relative;
   align-items: center;
   justify-content: center;
-  background-color: ${({ theme }) => theme.colors.primary}ef;
+  background-color: ${({ theme }) => theme.colors.secondary};
 `;
 
 export const WorksInnerContent = styled.div`

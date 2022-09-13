@@ -1,7 +1,4 @@
 import React from "react";
-import BackgroundLineCircleSVG from "./components/BackgroundLineCircleSVG";
-import BackgroundSquareCircleSVG from "./components/BackgroundSquareCircleSVG";
-import BackgroundSquareSVG from "./components/BackgroundSquareSVG";
 import {
   Heading,
   Paragraph,
@@ -11,36 +8,22 @@ import {
   SkillsInnerContent,
 } from "./styles";
 
-const HomeSkills = () => {
+const HomeSkills = ({ skills = [] }) => {
   return (
     <Section id="skills">
       <SkillsInnerContent>
-        <SkillsArticle>
-          <SkillsArticleContent>
-            <Heading>Design</Heading>
-            <Paragraph>
-              I'm probably not the typical designer positioned behind an
-              Illustrator artboard adjusting pixels, but I design. Immersed in
-              stylesheets tweaking font sizes and contemplating layouts is where
-              you'll find me (~_^). I'm committed to creating fluent user
-              experiences while staying fashionable.
-            </Paragraph>
-            <BackgroundSquareSVG />
-          </SkillsArticleContent>
-          <BackgroundSquareCircleSVG />
-        </SkillsArticle>
-        <SkillsArticle>
-          <SkillsArticleContent>
-            <Heading>Engineering</Heading>
-            <Paragraph>
-              In building JavaScript applications, I'm equipped with just the
-              right tools, and can absolutely function independently of them to
-              deliver fast, resilient solutions optimized for scale —
-              performance and scalabilty are priorities on my radar.
-            </Paragraph>
-          </SkillsArticleContent>
-          <BackgroundLineCircleSVG />
-        </SkillsArticle>
+        {skills.map(
+          ({ title, description, InnerContentSVG, OuterContentSVG }, index) => (
+            <SkillsArticle key={index}>
+              <SkillsArticleContent>
+                <Heading>{title}</Heading>
+                <Paragraph>{description}</Paragraph>
+                <InnerContentSVG />
+              </SkillsArticleContent>
+              <OuterContentSVG />
+            </SkillsArticle>
+          )
+        )}
       </SkillsInnerContent>
     </Section>
   );
