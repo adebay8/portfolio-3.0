@@ -24,6 +24,7 @@ const Theme = {
     grayDark: "#273444",
     gray: "#8492a6",
     grayLight: "#d3dce6",
+    white: "#ffffff",
   },
   extend: {
     spacing: {
