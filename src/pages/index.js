@@ -18,7 +18,7 @@ const IndexPage = () => {
     hero: {
       highlights: [
         "Highly skilled at progressive enhancement, design systems &#38; UI Engineering.",
-        "Over a decade of experience building products for clients across several countries.",
+        "Over 2 years of experience building products for clients across several countries.",
       ],
       navItems: [
         {
