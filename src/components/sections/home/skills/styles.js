@@ -1,12 +1,23 @@
 import styled from "styled-components";
 
 export const Section = styled.section`
-  min-height: 100vh;
-  height: 100vh;
   display: flex;
   position: relative;
   align-items: center;
   justify-content: center;
+
+  @media (max-height: 1199px) and (min-width: 701px) {
+    min-height: 100vh;
+    height: 100vh;
+  }
+
+  @media (max-width: 580px) {
+    margin-bottom: 10rem;
+
+    svg {
+      display: none;
+    }
+  }
 `;
 
 export const SkillsInnerContent = styled.div`
@@ -25,6 +36,10 @@ export const SkillsInnerContent = styled.div`
   @media (min-width: 1501px) {
     max-width: 1760px;
   }
+
+  @media (max-width: 580px) {
+    padding: 0 15vw;
+  }
 `;
 
 export const SkillsArticle = styled.article`
@@ -34,6 +49,12 @@ export const SkillsArticle = styled.article`
 
   &:nth-of-type(2) {
     justify-content: flex-end;
+  }
+
+  &:not(:last-child) {
+    @media (max-width: 700px) {
+      margin-bottom: 6vh;
+    }
   }
 `;
 
@@ -54,6 +75,10 @@ export const Heading = styled.h1`
     max-width: 30vw;
     transition-delay: 200ms;
   }
+
+  @media (max-width: 580px) {
+    font-size: 36px;
+  }
 `;
 
 export const Paragraph = styled.p`
@@ -66,6 +91,10 @@ export const Paragraph = styled.p`
     font-size: 1.07em;
     transition-delay: 310ms;
     width: 32vw;
+  }
+
+  @media (max-width: 580px) {
+    font-size: 13px;
   }
 `;
 

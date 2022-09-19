@@ -72,7 +72,8 @@ export const MenuButton = styled.button`
   transform: scale(${({ isOpen }) => (isOpen ? 0.9 : 1)});
 
   @media (max-width: 580px) {
-    color: #ccf381;
+    color: ${({ theme, isOpen }) =>
+      isOpen ? theme.colors.primary : theme.colors.secondary};
   }
 
   @media (max-width: 700px) {

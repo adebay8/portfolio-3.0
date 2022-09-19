@@ -9,6 +9,16 @@ export const WorksSection = styled.section`
   align-items: center;
   justify-content: center;
   background-color: ${({ theme }) => theme.colors.secondary};
+  /* overflow: hidden; */
+
+  @media (max-height: 1199px) and (min-width: 701px) {
+    min-height: 100vh;
+    height: 100vh;
+  }
+
+  @media (max-width: 580px) {
+    /* margin-bottom: 10rem; */
+  }
 `;
 
 export const WorksInnerContent = styled.div`
@@ -29,6 +39,10 @@ export const WorksInnerContent = styled.div`
     max-width: unset;
     padding: 0 calc(6em - 2em);
   }
+
+  @media (max-width: 580px) {
+    padding: 0 6vw;
+  }
 `;
 
 export const WorksLanes = styled.div`
@@ -38,6 +52,11 @@ export const WorksLanes = styled.div`
 
   @media (min-width: 1024px) and (min-height: 665px) and (max-height: 1500px) {
     min-height: 40em;
+  }
+
+  @media (max-width: 580px) {
+    flex-direction: column;
+    width: 95%;
   }
 `;
 
@@ -59,6 +78,10 @@ export const WorksLane = styled.div`
       border-bottom-width: 0;
       border-right-width: 0.15rem;
     }
+  }
+
+  @media (max-width: 580px) {
+    padding: 63px;
   }
 `;
 
@@ -84,9 +107,14 @@ export const WorksLaneArticleHeading = styled.h1`
     max-width: 30vw;
     transition-delay: 200ms;
   }
+
   opacity: 1;
   transform: translate3d(0, 0, 0);
   font-size: 3.2em;
+
+  @media (max-width: 580px) {
+    font-size: 29px;
+  }
 `;
 
 export const WorksLaneArticleParagraph = styled.p`
@@ -105,6 +133,10 @@ export const WorksLaneArticleParagraph = styled.p`
     /* font-size: 1.07em; */
     -webkit-transition-delay: 310ms;
     transition-delay: 310ms;
+  }
+
+  @media (max-width: 580px) {
+    font-size: 15px;
   }
 `;
 
@@ -163,5 +195,12 @@ export const WorksLaneLinkContent = styled.div`
     background: #fff;
     transform: translateX(-100%);
     transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  @media (max-width: 580px) {
+    padding: 10px 24px;
+    width: 60%;
+    min-height: 36px;
+    font-size: 9px;
   }
 `;
