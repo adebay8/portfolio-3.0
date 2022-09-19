@@ -63,6 +63,10 @@ export const InnerContentPrimary = styled(InnerContent)`
     @media (min-aspect-ratio: 1440 / 900) and (min-height: 738px) {
       display: block;
     }
+
+    @media (max-width: 700px) {
+      display: none;
+    }
   }
 
   @media (min-width: 581px) {
@@ -160,6 +164,10 @@ export const ProfileImage = styled.figure`
   @media (min-width: 701px) {
     margin-right: calc(6em + 4em);
   }
+
+  @media (max-width: 701px) {
+    display: none;
+  }
 `;
 
 export const ImageContainer = styled.span`
@@ -218,6 +226,10 @@ export const Nav = styled.nav`
   margin-top: -35px;
   color: ${({ theme }) => theme.colors.primary};
   right: calc(6em + 1em);
+
+  @media (max-width: 580px) {
+    display: none;
+  }
 `;
 
 export const NavItems = styled.ul`
@@ -281,7 +293,7 @@ export const MobileAvatar = styled.div`
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  background: #ccf381;
+  background: ${({ theme }) => theme.colors.secondary};
 
   @media (min-width: 700px) {
     display: none;
@@ -295,7 +307,7 @@ export const MobileFigure = styled.div`
   width: 198px;
   height: 209px;
   position: relative;
-  border: 0.115rem solid #fff;
+  border: 0.115rem solid ${({ theme }) => theme.colors.white};
 
   & > svg {
     top: -25%;
@@ -312,7 +324,7 @@ export const MobileImageContainer = styled.span`
   display: block;
   height: inherit;
   margin-top: -20px;
-  background-color: #fff;
+  background-color: ${({ theme }) => theme.colors.white};
   background-size: cover;
   background-position-x: center;
   margin-left: -18px;

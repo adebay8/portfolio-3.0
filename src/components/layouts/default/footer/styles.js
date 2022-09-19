@@ -3,10 +3,10 @@ import styled from "styled-components";
 
 export const Footer = styled.footer`
   z-index: 3;
+  background: ${({ theme }) => theme.colors.primary};
 
   @media (min-width: 701px) and (max-height: 1199px) {
     height: 100vh;
-    background: ${({ theme }) => theme.colors.primary};
   }
 
   display: flex;
@@ -20,6 +20,10 @@ export const InnerContent = styled.div`
   padding-top: 8rem;
   padding-bottom: 5rem;
   flex-direction: column;
+
+  @media (max-width: 580px) {
+    padding: 5rem 15vw 6rem;
+  }
 
   @media (min-width: 701px) and (max-width: 1500px) {
     max-width: 1500px;
@@ -37,6 +41,10 @@ export const FooterMain = styled.div`
   margin-bottom: 7.4rem;
   display: flex;
   width: 100%;
+
+  @media (max-width: 420px) {
+    flex-direction: column;
+  }
 `;
 
 export const BasicContact = styled.div`
@@ -47,6 +55,10 @@ export const BasicContact = styled.div`
   font-size: 1em;
   line-height: 2.5;
   position: relative;
+
+  @media (max-width: 580px) {
+    font-size: 14px;
+  }
 `;
 
 export const SayHello = styled.span`
@@ -58,6 +70,10 @@ export const SayHello = styled.span`
 
 export const List = styled.ul`
   font-size: 19px;
+
+  @media (max-width: 580px) {
+    font-size: 16px;
+  }
 `;
 
 export const ListItem = styled.li``;
@@ -78,13 +94,21 @@ export const CrossSiteNav = styled.ul`
   line-height: 2.5;
   font-size: 19px;
   margin-top: 2.05em;
+
+  @media (max-width: 580px) {
+    font-size: 16px;
+  }
 `;
 
 export const FooterBottom = styled.div`
   padding-top: 3em;
   font-size: 1.15em;
   justify-content: space-between;
-  border-top: 1px solid ${({ theme }) => theme.colors.secondary}; ;
+  border-top: 1px solid ${({ theme }) => theme.colors.secondary};
+
+  @media (max-width: 580px) {
+    font-size: 16px;
+  }
 `;
 
 export const FooterCopyright = styled.span`
