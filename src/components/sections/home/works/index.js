@@ -7,6 +7,7 @@ import {
   WorksLaneArticleHeading,
   WorksLaneArticleParagraph,
   WorksLaneLink,
+  WorksLaneExternalLink,
   WorksLaneLinkContent,
   WorksLanes,
   WorksSection,
@@ -34,9 +35,9 @@ const HomeWorks = () => {
                 </WorksLaneArticleParagraph>
               </WorksLaneArticleContent>
             </WorksLaneArticle>
-            <WorksLaneLink to="/work">
+            <WorksLaneExternalLink href="https://github.com/adebay8" target="_blank">
               <WorksLaneLinkContent>see my work</WorksLaneLinkContent>
-            </WorksLaneLink>
+            </WorksLaneExternalLink>
           </WorksLane>
           <WorksLane>
             <WorksLaneArticle>
@@ -55,9 +56,9 @@ const HomeWorks = () => {
                 </WorksLaneArticleParagraph>
               </WorksLaneArticleContent>
             </WorksLaneArticle>
-            <WorksLaneLink to="/shelf">
+            <WorksLaneExternalLink href="https://blog.ponnle.xyz" target="_blank">
               <WorksLaneLinkContent>read my articles</WorksLaneLinkContent>
-            </WorksLaneLink>
+            </WorksLaneExternalLink>
           </WorksLane>
         </WorksLanes>
       </WorksInnerContent>

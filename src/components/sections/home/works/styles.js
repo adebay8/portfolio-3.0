@@ -169,6 +169,35 @@ export const WorksLaneLink = styled(Link)`
   }
 `;
 
+export const WorksLaneExternalLink = styled.a`
+  color: #3d155f;
+  position: relative;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.9em;
+  user-select: none;
+  display: inline-flex;
+  overflow: hidden;
+  background: transparent;
+  white-space: nowrap;
+  min-width: 23.222em;
+  outline: none;
+  text-decoration: none;
+
+  &:hover > div {
+    color: ${({ theme }) => theme.colors.primary};
+    border-color: #fff;
+
+    &:before {
+      -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+      transform: translateX(0);
+      background: #fff;
+    }
+  }
+`;
+
 export const WorksLaneLinkContent = styled.div`
   z-index: 1;
   display: flex;

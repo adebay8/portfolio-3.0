@@ -60,7 +60,7 @@ const IndexPage = () => {
       links: [
         {
           title: "My Work",
-          link: "/work",
+          link: "https://github.com/adebay8",
         },
         {
           title: "My Shelf",
