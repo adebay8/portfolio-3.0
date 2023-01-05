@@ -41,8 +41,8 @@ const HomeHero = ({ data }) => {
               </span>
             </JobTitleText>
             <JobTitleSubText>
-              I like to craft solid and scalable frontend products with great
-              user experiences.
+              I like to craft solid and scalable web products with great user
+              experiences.
             </JobTitleSubText>
           </JobTitleContent>
         </JobTitle>

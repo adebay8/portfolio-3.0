@@ -9,7 +9,7 @@ export const WorksSection = styled.section`
   align-items: center;
   justify-content: center;
   background-color: ${({ theme }) => theme.colors.secondary};
-  /* overflow: hidden; */
+  overflow: hidden;
 
   @media (max-height: 1199px) and (min-width: 701px) {
     min-height: 100vh;
