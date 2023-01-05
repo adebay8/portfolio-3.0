@@ -1,97 +1,74 @@
 import * as React from "react";
+import { graphql } from "gatsby";
 import { Meta } from "../components/common";
 import { DefaultLayout } from "../components/layouts";
 import { HomeHero, HomeSkills, HomeWorks } from "../components/sections/home";
-import BackgroundSquareSVG from "../components/sections/home/skills/components/BackgroundSquareSVG";
-import BackgroundLineCircleSVG from "../components/sections/home/skills/components/BackgroundLineCircleSVG";
-import BackgroundSquareCircleSVG from "../components/sections/home/skills/components/BackgroundSquareCircleSVG";
 
 import "../styles/globals.css";
 
-const IndexPage = () => {
-  const data = {
-    meta: {
-      title: "Onuchuwku Adebayo - Software Engineer",
-      description:
-        "Onuchukwu Adebayo is a Software Engineer highly skilled at design systems and progressively enhanced web applications.",
-    },
-    hero: {
-      highlights: [
-        "Highly skilled at progressive enhancement, design systems &#38; UI Engineering.",
-        "Over 2 years of experience building products for clients across several countries.",
-      ],
-      navItems: [
-        {
-          path: "/#",
-        },
-        {
-          path: "/#skills",
-        },
-        {
-          path: "/#works",
-        },
-        {
-          path: "/#contact",
-        },
-      ],
-    },
-    skills: [
-      {
-        title: "Design",
-        description: `I'm probably not the typical designer positioned behind an 
-        Illustrator artboard adjusting pixels, but I design. Immersed in
-        stylesheets tweaking font sizes and contemplating layouts is
-        where you'll find me (~_^). I'm committed to creating fluent
-        user experiences while staying fashionable.`,
-        InnerContentSVG: BackgroundSquareSVG,
-        OuterContentSVG: BackgroundSquareCircleSVG,
+const IndexPage = ({ data }) => {
+  const {
+    strapiPage: {
+      meta,
+      additional_fields: {
+        sections: { hero, skills },
       },
-      {
-        title: "Engineering",
-        description: `In building JavaScript applications, I'm equipped with just the
-        right tools, and can absolutely function independently of them to
-        deliver fast, resilient solutions optimized for scale —
-        performance and scalabilty are priorities on my radar.`,
-        InnerContentSVG: () => <></>,
-        OuterContentSVG: BackgroundLineCircleSVG,
-      },
-    ],
-    nav: {
-      links: [
-        {
-          title: "My Work",
-          link: "https://github.com/adebay8",
-        },
-        {
-          title: "My Shelf",
-          link: "https://blog.ponnle.xyz",
-        },
-        {
-          title: "My Resume",
-          link: "/resume",
-        },
-      ],
-      contact: [
-        {
-          title: "adebayop.o@yahoo.com",
-          link: "mailto:adebayop.o@yahoo.com",
-        },
-        {
-          title: "t.me/oluwaponnle",
-          link: "https://t.me/oluwaponnle",
-        },
-      ],
     },
-  };
+    strapiNav: { nav },
+  } = data;
 
   return (
-    <DefaultLayout nav={data.nav}>
-      <Meta {...data.meta} />
-      <HomeHero data={data.hero} />
-      <HomeSkills skills={data.skills} />
+    <DefaultLayout nav={nav}>
+      <Meta {...meta} />
+      <HomeHero data={hero} />
+      <HomeSkills skills={skills} />
       <HomeWorks />
     </DefaultLayout>
   );
 };
+
+export const query = graphql`
+  query HomePage {
+    strapiPage(name: { eq: "home" }) {
+      name
+      slug
+      additional_fields {
+        sections {
+          hero {
+            highlights
+            navItems {
+              path
+            }
+          }
+          skills {
+            title
+            description
+            InnerContentSVG
+            OuterContentSVG
+          }
+        }
+      }
+      meta {
+        title: og_title
+        description: og_description
+        # og_image
+        twitter_title
+        twitter_description
+      }
+    }
+    strapiNav {
+      nav {
+        links {
+          title
+          link
+        }
+        contact {
+          title
+          link
+        }
+      }
+    }
+  }
+`;
 
 export default IndexPage;
