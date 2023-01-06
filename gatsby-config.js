@@ -15,6 +15,34 @@ module.exports = {
         trackingId: "G-QPSC27RSHD",
       },
     },
+    {
+      resolve: "gatsby-source-strapi",
+      options: {
+        apiURL: process.env.STRAPI_API_URL || "http://localhost:1337",
+        accessToken: process.env.STRAPI_TOKEN,
+        collectionTypes: [
+          {
+            singularName: "page",
+            queryParams: {
+              populate: {
+                meta: "*",
+              },
+            },
+          },
+          {
+            singularName: "project",
+            queryParams: {
+              populate: {
+                logo: "*",
+              },
+              sort: ["createdAt:desc"],
+            },
+          },
+        ],
+        singleTypes: ["nav"],
+        queryLimit: 100,
+      },
+    },
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",

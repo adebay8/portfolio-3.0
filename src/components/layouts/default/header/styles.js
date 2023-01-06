@@ -13,7 +13,7 @@ export const HeaderSection = styled.header`
   height: 11.12rem;
 
   @media (min-width: 701px) {
-    position: fixed;
+    position: ${({ fixHeader }) => (fixHeader ? "fixed" : "relative")};
     padding-left: 6em;
     padding-right: 6em;
   }
@@ -21,7 +21,7 @@ export const HeaderSection = styled.header`
   @media (max-width: 700px) {
     padding-left: 32px;
     padding-right: 45px;
-    position: absolute;
+    position: ${({ fixHeader }) => (fixHeader ? "absolute" : "relative")};
     height: 8rem;
   }
 
