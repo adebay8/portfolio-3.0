@@ -29,9 +29,18 @@ module.exports = {
               },
             },
           },
+          {
+            singularName: "project",
+            queryParams: {
+              populate: {
+                logo: "*",
+              },
+              sort: ["createdAt:desc"],
+            },
+          },
         ],
         singleTypes: ["nav"],
-        queryLimit: 1000,
+        queryLimit: 100,
       },
     },
     "gatsby-plugin-image",
