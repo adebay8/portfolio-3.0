@@ -18,7 +18,7 @@ const IndexPage = ({ data }) => {
   } = data;
 
   return (
-    <DefaultLayout nav={nav}>
+    <DefaultLayout nav={nav} fixHeader={true}>
       <Meta {...meta} />
       <HomeHero data={hero} />
       <HomeSkills skills={skills} />

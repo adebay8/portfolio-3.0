@@ -11,7 +11,6 @@ export const HeaderSection = styled.header`
   justify-content: space-between;
   font-size: 1rem;
   height: 11.12rem;
-  position: relative;
 
   @media (min-width: 701px) {
     position: ${({ fixHeader }) => (fixHeader ? "fixed" : "relative")};
@@ -22,6 +21,7 @@ export const HeaderSection = styled.header`
   @media (max-width: 700px) {
     padding-left: 32px;
     padding-right: 45px;
+    position: ${({ fixHeader }) => (fixHeader ? "absolute" : "relative")};
     height: 8rem;
   }
 
