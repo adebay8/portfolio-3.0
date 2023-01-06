@@ -1,4 +1,6 @@
 import React from "react";
+import { useTheme } from "styled-components";
+import Arrow from "./components/Arrow";
 import {
   WorksInnerContent,
   WorksLane,
@@ -6,13 +8,16 @@ import {
   WorksLaneArticleContent,
   WorksLaneArticleHeading,
   WorksLaneArticleParagraph,
-  WorksLaneLink,
+  // WorksLaneLink,
+  WorksLaneExternalLink,
   WorksLaneLinkContent,
   WorksLanes,
   WorksSection,
 } from "./styles";
 
 const HomeWorks = () => {
+  const theme = useTheme();
+
   return (
     <WorksSection id="works">
       <WorksInnerContent>
@@ -34,9 +39,15 @@ const HomeWorks = () => {
                 </WorksLaneArticleParagraph>
               </WorksLaneArticleContent>
             </WorksLaneArticle>
-            <WorksLaneLink to="/work">
-              <WorksLaneLinkContent>see my work</WorksLaneLinkContent>
-            </WorksLaneLink>
+            <WorksLaneExternalLink
+              href="https://github.com/adebay8"
+              target="_blank"
+            >
+              <WorksLaneLinkContent>
+                see my work
+                <Arrow width={25} color={theme.colors.secondary} />
+              </WorksLaneLinkContent>
+            </WorksLaneExternalLink>
           </WorksLane>
           <WorksLane>
             <WorksLaneArticle>
@@ -55,9 +66,15 @@ const HomeWorks = () => {
                 </WorksLaneArticleParagraph>
               </WorksLaneArticleContent>
             </WorksLaneArticle>
-            <WorksLaneLink to="/shelf">
-              <WorksLaneLinkContent>read my articles</WorksLaneLinkContent>
-            </WorksLaneLink>
+            <WorksLaneExternalLink
+              href="https://blog.ponnle.xyz"
+              target="_blank"
+            >
+              <WorksLaneLinkContent>
+                read my articles
+                <Arrow width={25} color={theme.colors.secondary} />
+              </WorksLaneLinkContent>
+            </WorksLaneExternalLink>
           </WorksLane>
         </WorksLanes>
       </WorksInnerContent>

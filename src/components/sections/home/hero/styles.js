@@ -179,7 +179,8 @@ export const ImageContainer = styled.span`
   background-size: cover;
   background-position-x: center;
   margin-left: -2.2em;
-  background-image: url("https://via.placeholder.com/700/bbbbbb");
+  background-image: url("https://v1.ponnle.xyz/static/media/image.3fb473d2.png");
+  background-color: #ccc;
 `;
 
 export const InnerContentBottom = styled(InnerContent)`
@@ -328,5 +329,6 @@ export const MobileImageContainer = styled.span`
   background-size: cover;
   background-position-x: center;
   margin-left: -18px;
-  background-image: url("https://via.placeholder.com/700/bbbbbb");
+  background-image: url("https://v1.ponnle.xyz/static/media/image.3fb473d2.png");
+  background-color: #ccc;
 `;

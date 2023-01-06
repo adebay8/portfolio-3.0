@@ -14,11 +14,11 @@ import {
   SayHello,
 } from "./styles";
 
-export const Header = ({ links, contact }) => {
+export const Header = ({ links, contact, fixHeader }) => {
   const [isOpen, setOpen] = useState(false);
 
   return (
-    <HeaderSection>
+    <HeaderSection fixHeader={fixHeader}>
       <Logo to="/">
         <LogoText>Onuchukwu.</LogoText>
       </Logo>

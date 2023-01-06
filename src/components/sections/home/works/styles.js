@@ -9,7 +9,7 @@ export const WorksSection = styled.section`
   align-items: center;
   justify-content: center;
   background-color: ${({ theme }) => theme.colors.secondary};
-  /* overflow: hidden; */
+  overflow: hidden;
 
   @media (max-height: 1199px) and (min-width: 701px) {
     min-height: 100vh;
@@ -141,6 +141,35 @@ export const WorksLaneArticleParagraph = styled.p`
 `;
 
 export const WorksLaneLink = styled(Link)`
+  color: #3d155f;
+  position: relative;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.9em;
+  user-select: none;
+  display: inline-flex;
+  overflow: hidden;
+  background: transparent;
+  white-space: nowrap;
+  min-width: 23.222em;
+  outline: none;
+  text-decoration: none;
+
+  &:hover > div {
+    color: ${({ theme }) => theme.colors.primary};
+    border-color: #fff;
+
+    &:before {
+      -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+      transform: translateX(0);
+      background: #fff;
+    }
+  }
+`;
+
+export const WorksLaneExternalLink = styled.a`
   color: #3d155f;
   position: relative;
   font-weight: bold;

@@ -50,20 +50,21 @@ export const Footer = ({ links, contact }) => {
           </CrossSiteNav>
         </FooterMain>
         <FooterBottom>
-          <FooterCopyright>
-            &#169; Onuchukwu Adebayo 2022
-            <br />
-            <br />
-            <FooterCopyright>
-              Inspired by&nbsp;
-              <a
-                href="https://olaolu.dev"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Olaolu
-              </a>
-            </FooterCopyright>
+          <FooterCopyright>&#169; Onuchukwu Adebayo 2022</FooterCopyright>
+          <br />
+          <FooterCopyright style={{ fontSize: 12 }}>
+            Inspired by&nbsp;
+            <a
+              href="https://olaolu.dev"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                color: "#aaa",
+                textDecoration: "none",
+              }}
+            >
+              Olaolu
+            </a>
           </FooterCopyright>
         </FooterBottom>
       </InnerContent>
