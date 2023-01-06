@@ -1,39 +1,59 @@
 import React from "react";
-import { DefaultLayout } from "../components/layouts";
+import { graphql } from "gatsby";
+import { WorkLayout } from "../components/layouts";
+import { WorkHeader, WorkProjects } from "../components/sections/work";
+import { Meta } from "../components/common";
 
-const Work = () => {
+const Work = ({
+  data: {
+    strapiNav: { nav },
+    strapiPage: { meta },
+    allStrapiProject: { nodes },
+  },
+}) => {
   return (
-    <DefaultLayout
-      nav={{
-        links: [
-          {
-            title: "My Work",
-            link: "/work",
-          },
-          {
-            title: "My Shelf",
-            link: "https://blog.ponnle.xyz",
-          },
-          {
-            title: "My Resume",
-            link: "/resume",
-          },
-        ],
-        contact: [
-          {
-            title: "adebayop.o@yahoo.com",
-            link: "mailto:adebayop.o@yahoo.com",
-          },
-          {
-            title: "t.me/oluwaponnle",
-            link: "https://t.me/oluwaponnle",
-          },
-        ],
-      }}
-    >
-      <></>
-    </DefaultLayout>
+    <WorkLayout nav={nav}>
+      <Meta {...meta} />
+      <WorkHeader />
+      <WorkProjects projects={nodes} />
+    </WorkLayout>
   );
 };
+
+export const query = graphql`
+  query WorkPage {
+    strapiNav {
+      nav {
+        links {
+          title
+          link
+        }
+        contact {
+          title
+          link
+        }
+      }
+    }
+    strapiPage(name: { eq: "work" }) {
+      name
+      slug
+      meta {
+        title: og_title
+        description: og_description
+        twitter_title
+        twitter_description
+      }
+    }
+    allStrapiProject {
+      nodes {
+        title
+        url
+        logo {
+          url
+        }
+      }
+    }
+  }
+`;
 
 export default Work;
