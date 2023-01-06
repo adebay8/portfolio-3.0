@@ -5,10 +5,10 @@ import Theme from "../../../styles/theme";
 import { Header } from "./header";
 import { Footer } from "./footer";
 
-const DefaultLayout = ({ nav, children }) => {
+const DefaultLayout = ({ nav, children, fixHeader = true }) => {
   return (
     <ThemeProvider theme={Theme}>
-      <Header {...nav} />
+      <Header {...nav} fixHeader={fixHeader} />
       <main>{children}</main>
       <Footer {...nav} />
     </ThemeProvider>
