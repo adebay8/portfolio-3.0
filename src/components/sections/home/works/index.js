@@ -39,10 +39,7 @@ const HomeWorks = () => {
                 </WorksLaneArticleParagraph>
               </WorksLaneArticleContent>
             </WorksLaneArticle>
-            <WorksLaneExternalLink
-              href="https://github.com/adebay8"
-              target="_blank"
-            >
+            <WorksLaneExternalLink href="/work">
               <WorksLaneLinkContent>
                 see my work
                 <Arrow width={25} color={theme.colors.secondary} />
