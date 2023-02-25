@@ -8,7 +8,7 @@ import {
   WorksLaneArticleContent,
   WorksLaneArticleHeading,
   WorksLaneArticleParagraph,
-  // WorksLaneLink,
+  WorksLaneLink,
   WorksLaneExternalLink,
   WorksLaneLinkContent,
   WorksLanes,
@@ -39,12 +39,12 @@ const HomeWorks = () => {
                 </WorksLaneArticleParagraph>
               </WorksLaneArticleContent>
             </WorksLaneArticle>
-            <WorksLaneExternalLink href="/work">
+            <WorksLaneLink to="/work">
               <WorksLaneLinkContent>
                 see my work
                 <Arrow width={25} color={theme.colors.secondary} />
               </WorksLaneLinkContent>
-            </WorksLaneExternalLink>
+            </WorksLaneLink>
           </WorksLane>
           <WorksLane>
             <WorksLaneArticle>
